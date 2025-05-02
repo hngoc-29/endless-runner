@@ -2,15 +2,17 @@
 
 Một trò chơi chạy vô tận đơn giản giống Chrome Dino, viết bằng **Python + Pygame**, có âm thanh, điểm số cao, tăng tốc theo thời gian và hiệu ứng hình ảnh động.
 
-![screenshot](D:\code\python\endlessrunner\assets\images\exam1.png)
-![screenshot](D:/code/python/endlessrunner/assets/images/exam2.png)
-![screenshot](D:/code/python/endlessrunner/assets/images/exam3.png)
+---
+
+<img src="https://github.com/hngoc-29/endless-runner/raw/main/assets/images/exam1.png" width="33%" />
+<img src="https://github.com/hngoc-29/endless-runner/raw/main/assets/images/exam2.png" width="33%" />
+<img src="https://github.com/hngoc-29/endless-runner/raw/main/assets/images/exam3.png" width="33%" />
 
 ---
 
 ### 📦 Link tải bản chơi thử `.exe`
 
-👉 [Tải bản chạy sẵn (.exe)](https://drive.google.com/uc?export=download&id=1Vnj2TZCe__dB7mss1Nps6UjfVxxODdXo)
+👉 [Tải bản chạy sẵn (.exe)](https://github.com/hngoc-29/endless-runner/raw/main/dist/Dino.exe)
 
 ---
 
