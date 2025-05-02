@@ -2,7 +2,7 @@
 import pygame
 import os
 
-from define import WIDTH, HEIGHT
+from define import WIDTH, HEIGHT, ROOT_PATH
 import define
 
 bg1_x = 0
@@ -41,15 +41,16 @@ def read_high_score():
         except:
             return 0
 
-HIGH_SCORE_FILE = os.path.join(os.getcwd(), 'assets\\text\\highscore.txt')
+HIGH_SCORE_FILE = os.path.join(os.getcwd(), 'assets\\highscore.txt')
 # Ghi high score vào file
 def write_high_score(score):
+    # Tạo thư mục nếu chưa có
+    os.makedirs(os.path.dirname(HIGH_SCORE_FILE), exist_ok=True)
     with open(HIGH_SCORE_FILE, 'w') as f:
         f.write(str(score))
 
 # Hàm hiển thị màn hình Game Over, Score và High Score
 def game_over(screen, score):
-    pygame.init()
     # Đọc high score cũ
     high_score = read_high_score()
     if score > high_score:
@@ -98,8 +99,9 @@ def game_over(screen, score):
         pygame.display.flip()
         clock.tick(15)
 
-def draw_score(screen, score, font, color=(255, 255, 255)):
+def draw_score(screen, score, color=(255, 255, 255)):
     high_score = read_high_score()
+    font = pygame.font.SysFont(None, 36)
     score_text = font.render(f"Score: {int(score)}/{high_score}", True, color)
     screen.blit(score_text, (WIDTH - score_text.get_width() - 20, 20))
 

@@ -108,7 +108,7 @@ while isProgramRun:
             if(player.sound_ht and score % 100 == 0):
                 leverup_sound.play()
 
-    draw_score(WINDOWGAME, score, pygame.font.SysFont(None, 36))
+    draw_score(WINDOWGAME, score)
 
     fps = clock.get_fps()
     fps_text = font.render(f"FPS: {fps:.0f}", True, WHITE)
