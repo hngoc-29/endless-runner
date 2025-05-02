@@ -4,9 +4,11 @@ Một trò chơi chạy vô tận đơn giản giống Chrome Dino, viết bằn
 
 ---
 
-<img src="https://github.com/hngoc-29/endless-runner/raw/main/assets/images/exam1.png" width="33%" />
-<img src="https://github.com/hngoc-29/endless-runner/raw/main/assets/images/exam2.png" width="33%" />
-<img src="https://github.com/hngoc-29/endless-runner/raw/main/assets/images/exam3.png" width="33%" />
+![screenshot](https://github.com/hngoc-29/endless-runner/raw/main/assets/images/exam1.png)
+
+![screenshot](https://github.com/hngoc-29/endless-runner/raw/main/assets/images/exam2.png)
+
+![screenshot](https://github.com/hngoc-29/endless-runner/raw/main/assets/images/exam3.png)
 
 ---
 
