@@ -2,3 +2,5 @@ __pycache__
 build
 main.spec
 highscore.txt
+.hs.dat
+dist/assets

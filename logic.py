@@ -1,6 +1,7 @@
 # D:\code\python\logic.py
 import pygame
 import os
+import struct
 
 from define import WIDTH, HEIGHT, ROOT_PATH
 import define
@@ -31,23 +32,22 @@ def draw(screen, BACKGROUND_IMAGE, player_speed):
     screen.blit(BACKGROUND_IMAGE, (bg1_x, 0))
     screen.blit(BACKGROUND_IMAGE, (bg2_x, 0))
 
-# Đọc high score từ file
+HIGH_SCORE_FILE = os.path.join(os.getcwd(), 'assets', '.hs.dat')
+# Ghi điểm (dưới dạng nhị phân)
+def write_high_score(score):
+    os.makedirs(os.path.dirname(HIGH_SCORE_FILE), exist_ok=True)
+    with open(HIGH_SCORE_FILE, 'wb') as f:
+        f.write(struct.pack('i', score))  # 'i' = integer 4 byte
+
+# Đọc điểm từ file nhị phân
 def read_high_score():
     if not os.path.exists(HIGH_SCORE_FILE):
         return 0
-    with open(HIGH_SCORE_FILE, 'r') as f:
-        try:
-            return int(f.read())
-        except:
-            return 0
-
-HIGH_SCORE_FILE = os.path.join(os.getcwd(), 'assets\\highscore.txt')
-# Ghi high score vào file
-def write_high_score(score):
-    # Tạo thư mục nếu chưa có
-    os.makedirs(os.path.dirname(HIGH_SCORE_FILE), exist_ok=True)
-    with open(HIGH_SCORE_FILE, 'w') as f:
-        f.write(str(score))
+    try:
+        with open(HIGH_SCORE_FILE, 'rb') as f:
+            return struct.unpack('i', f.read(4))[0]
+    except:
+        return 0
 
 # Hàm hiển thị màn hình Game Over, Score và High Score
 def game_over(screen, score):

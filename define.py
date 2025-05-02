@@ -2,7 +2,7 @@ import os
 
 WIDTH, HEIGHT = 1000, 500
 
-TITLE = 'RUNNER'
+TITLE = 'DINO'
 
 ROOT_PATH = os.path.dirname(__file__)
 ASSET_PATH = os.path.join(ROOT_PATH, 'assets')

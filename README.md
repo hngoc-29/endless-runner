@@ -2,14 +2,15 @@
 
 Một trò chơi chạy vô tận đơn giản giống Chrome Dino, viết bằng **Python + Pygame**, có âm thanh, điểm số cao, tăng tốc theo thời gian và hiệu ứng hình ảnh động.
 
-![screenshot](https://i.imgur.com/4RMVfQa.png) <!-- Bạn có thể thay bằng ảnh thật từ project -->
+![screenshot](D:\code\python\endlessrunner\assets\images\exam1.png)
+![screenshot](D:/code/python/endlessrunner/assets/images/exam2.png)
+![screenshot](D:/code/python/endlessrunner/assets/images/exam3.png)
 
 ---
 
 ### 📦 Link tải bản chơi thử `.exe`
 
-👉 [Tải bản chạy sẵn (.exe)](https://example.com/dino_run.exe)
-*(Thay link bằng Google Drive, Dropbox hoặc nơi bạn up file `dino_run.exe`)*
+👉 [Tải bản chạy sẵn (.exe)](https://drive.google.com/uc?export=download&id=1Vnj2TZCe__dB7mss1Nps6UjfVxxODdXo)
 
 ---
 
@@ -46,7 +47,8 @@ Một trò chơi chạy vô tận đơn giản giống Chrome Dino, viết bằn
 ├── assets/
 │   ├── image/
 │   ├── sound/
-│   └── text/highscore.txt
+│   ├── ARIAL.TTF
+│   └── highscore.txt
 ```
 
 ---
@@ -74,31 +76,12 @@ Dùng [PyInstaller](https://pyinstaller.org/) để đóng gói:
    ```bash
    pyinstaller main.py --onefile --add-data "assets;assets" --windowed
    ```
+   Hoặc nếu muốn có icon
+   ```bash
+   pyinstaller main.py --onefile --add-data "assets;assets" --windowed --icon="<thư mục gốc>\assets\images\logoGame.ico"
+   ```
 
 3. File `.exe` sẽ nằm ở `dist/main.exe`
-
----
-
-## 📄 Ghi chú khi build
-
-Nếu bạn dùng:
-
-```python
-ASSET_PATH = os.path.join(ROOT_PATH, 'assets')
-```
-
-Hãy thay bằng:
-
-```python
-def resource_path(relative_path):
-    try:
-        base_path = sys._MEIPASS
-    except AttributeError:
-        base_path = os.path.abspath(".")
-    return os.path.join(base_path, relative_path)
-
-ASSET_PATH = resource_path('assets')
-```
 
 ---
 
